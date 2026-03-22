@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    color: var(--white-color);
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    background-color: var(--dark-color);
+}
+:root {
+    /* colors */
+    --dark-color: #2E3033;
+    --white-color: #ffff;
+    --dark-orange-color: #E47A09;
+
+    /* font sizes */
+    --font-size-s: 18px;
+    --font-size-ss: 25px;
+    --font-size-sss: 30px;
+    --font-size-m: 29px;
+    --font-size-l: 45px;
+    --font-size-ll: 50px;
+    --font-size-xl: 61px;
+    --font-size-xxl: 96px;
+
+    /* font weight */
+    --font-weight-normal: 400;
+    --font-weight-medium: 500;
+    --font-weight-semibold: 600;
+    --font-weight-bold: 700;
+    --font-weight-small:200;
+}
+
+h2 {
+    font-size: var(--font-size-ll);
+    color: var(--dark-orange-color);
+    font-weight: var(--font-weight-semibold);
+}
+
+h3 {
+    font-size: var(--font-size-sss);
+    color: var(--white-color);
+    font-weight: var(--font-weight-medium);
+}
+
+.content {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.boy{
+  display:flex;           /* <- make .boy a flex container */
+  flex-direction:column;  /* stack h2, h3, img vertically */
+  gap:40px;               /* space between h2, h3, img */
+  align-items:center;     /* center items horizontally inside .boy */
+  text-align:center;
+}
+
+.boy img{
+    height: 250px;
+}
