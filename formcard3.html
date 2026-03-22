@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Form 3</title>
+
+    <link rel="stylesheet" href="css/formcard3.css">
+    <link rel="stylesheet" href="h-f.css">
+</head>
+<body>
+
+    <div id="header"></div>
+
+    <form action="https://script.google.com/macros/s/AKfycbzUdc7GPIIcJvaU1wFbCBuRtkzfDI5n7cGC-aH8IADaHZ17GiEK0Xvo_Czq8VVK4aIq9g/exec" class="form" name="form3" id ="form3">
+        
+        <!-- Section 1: Personal Info -->
+        <section class="content1">
+            <div class="appl">
+                <h2>Стати ментором</h2>
+                <p>Щоб стати частиною команди менторів Noosphere Engineering School Dnipro, заповніть, будь ласка, форму нижче</p>   
+                
+                <div class="grid-a">
+                    <div class="part1">
+                        <div class="input-box">
+                            <label for="full_name">ПІБ</label>
+                            <input type="text" id="full_name" name="full_name" placeholder="П.І.Б" required />
+                        </div>
+                        <div class="input-box">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" placeholder="example@mail.com" required />
+                        </div>
+                        <div class="input-box">
+                            <label for="phone">Моб. телефон</label>
+                            <input type="tel" id="phone" name="phone" placeholder="+38(0__)___-__" required />
+                        </div>
+                        <div class="input-box">
+                            <label for="place">Місце навчання | Місце роботи</label>
+                            <input type="text" id="place" name="place" placeholder="|" required />
+                        </div>
+                        <div class="input-box">
+                            <label for="mentoring_time">Скільки часу Ви готові присвячувати менторству?</label>
+                            <input type="text" id="mentoring_time" name="mentoring_time" placeholder="кількість годин на тиждень" required />
+                        </div>
+                    </div>
+
+                    <div class="part2">
+                        <img src="images/people.png" alt="People illustration">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 2: Competencies -->
+        <section class="content">
+            <div class="appl3">
+                <div class="input-box1">
+                    <label for="skills">Спеціальність, ключові компетенції</label>
+                    <textarea id="skills" name="skills" placeholder="Стисло опишіть Ваші головні якості" required></textarea>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3: How did you hear about us -->
+        <section class="content2">
+            <div class="appl2">
+                <div class="choose-box">
+                    <h2>Як ви дізналися про Noosphere Engineering School Dnipro?</h2>
+                    <div class="choose-option-g">
+                        <div class="part-1">
+                            <div class="choose">
+                                <input type="radio" id="source_rec" name="source_info" value="Рекомендація знайомих" checked />
+                                <label for="source_rec">Рекомендація знайомих</label>
+                            </div>
+                            <div class="choose">
+                                <input type="radio" id="source_event" name="source_info" value="На заході" />
+                                <label for="source_event">На заході</label>
+                            </div>
+                            <div class="choose">
+                                <input type="radio" id="source_offline" name="source_info" value="Офлайн оголошення" />
+                                <label for="source_offline">Офлайн оголошення</label>
+                            </div>
+                            <div class="choose">
+                                <input type="radio" id="source_facebook" name="source_info" value="Facebook" />
+                                <label for="source_facebook">Facebook</label>
+                            </div>
+                        </div>
+                        <div class="part-2">
+                            <div class="choose">
+                                <input type="radio" id="source_instagram" name="source_info" value="Instagram" />
+                                <label for="source_instagram">Instagram</label>
+                            </div>
+                            <div class="choose">
+                                <input type="radio" id="source_youtube" name="source_info" value="Youtube" />
+                                <label for="source_youtube">Youtube</label>
+                            </div>
+                            <div class="choose">
+                                <input type="radio" id="source_other" name="source_info" value="Інше" />
+                                <label for="source_other">Інше</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="u">
+                    <p>Авторські права на ідеї, технології тощо завжди належать їхньому автору. Ми зобов'язуємося не передавати інформацію, надану в цій формі, третім особам без Вашої згоди</p>
+                    <p>Всі поля обов'язкові</p>
+                </div>
+
+                <div class="b">
+                    <button type="submit" class="button">Подати заявку</button>
+                </div>
+            </div>
+        </section>
+    </form>
+
+    <div id="footer"></div>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="script.js"></script>
+    <script src="form3.js"></script>
+
+    <script>
+        const phoneInput = document.getElementById('phone');
+
+        phoneInput.addEventListener('input', function(e) {
+            // залишаємо тільки цифри
+            let digits = this.value.replace(/\D/g, '');
+
+            // завжди додаємо +38(0
+            let formatted = '+38(0';
+
+            // наступні цифри
+            if (digits.length > 3) {
+                formatted += digits.substring(3, 5); // код оператора
+                if (digits.length > 5) {
+                    formatted += ')' + digits.substring(5, 8); // перші 3 цифри номера
+                    if (digits.length > 8) {
+                        formatted += '-' + digits.substring(8, 10); // наступні 2 цифри
+                        if (digits.length > 10) {
+                            formatted += '-' + digits.substring(10, 12); // останні 2 цифри
+                        }
+                    }
+                } else {
+                    formatted += ')';
+                }
+            }
+
+            this.value = formatted;
+        });
+
+    </script>
+</body>
+</html>

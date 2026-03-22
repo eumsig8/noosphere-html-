@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Form 1</title>
+
+    <link rel="stylesheet" href="css/formcard1.css">
+    <link rel="stylesheet" href="h-f.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- SweetAlert2 -->
+
+</head>
+<body>
+
+    <div id="header"></div>
+
+    <form action="https://script.google.com/macros/s/AKfycbxPBBDfweHXd7Fp4ozULFBWKLx9SMB6wyJkCQtYHIIFmwCWQORCGFXowD6QCuDbzRVEPQ/exec" class="form" name="form" id ="form">
+
+        <!-- Section 1 -->
+        <section class="content1">
+            <div class="appl">
+                <h2>Реалізувати свою ідею</h2>
+                <p>Щоб втілити власний проєкт за підтримки Noosphere Engineering School Dnipro, заповніть, будь ласка, форму нижче</p>   
+                <div class="grid-a">
+                    <div class="part1">
+                        <div class="input-box">
+                            <label for="full_name">ПІБ</label>
+                            <input type="text" id="full_name" name="full_name" placeholder="П.І.Б" required autocomplete="name" />
+                        </div>
+                        <div class="input-box">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" placeholder="example@mail.com" required autocomplete="email" />
+                        </div>
+                        <div class="input-box">
+                            <label for="phone">Моб. телефон</label>
+                            <input type="tel" id="phone" name="phone" placeholder="+38(0__)___-__" required autocomplete="tel" />
+                        </div>
+                        <div class="choose-box">
+                            <h2>Якому типу проєктів відповідає ваша ідея?</h2>
+                            <div class="choose-option">
+                                <div class="choose">
+                                    <input type="radio" id="project_type1" name="project_type" value="Стартап (комерційний проєкт)" checked autocomplete="off" />
+                                    <label for="project_type1">Стартап (комерційний проєкт)</label>
+                                </div>
+                                <div class="choose">
+                                    <input type="radio" id="project_type2" name="project_type" value="Соціальний проєкт з інноваційною складовою"  autocomplete="off" />
+                                    <label for="project_type2">Соціальний проєкт з інноваційною складовою</label>
+                                </div>
+                                <div class="choose">
+                                    <input type="radio" id="project_type3" name="project_type" value="Освітній проєкт"  autocomplete="off" />
+                                    <label for="project_type3">Освітній проєкт</label>
+                                </div>
+                                <div class="choose">
+                                    <input type="radio" id="project_type4" name="project_type" value="Науково-дослідний проєкт" autocomplete="off" />
+                                    <label for="project_type4">Науково-дослідний проєкт</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="part2">
+                        <img src="images/people.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 2 -->
+        <section class="content">
+            <div class="appl2">
+                <div class="choose-box">
+                    <h2>Як ви дізналися про Noosphere Engineering School Dnipro?</h2>
+                    <div class="choose-option-g">
+                        <div class="part-1">
+                            <div class="choose">
+                                <input type="radio" id="source1" name="source_info" value="Рекомендація знайомих" checked autocomplete="off" />
+                                <label for="source1">Рекомендація знайомих</label>
+                            </div>
+                            <div class="choose">
+                                <input type="radio" id="source2" name="source_info" value="На заході" autocomplete="off" />
+                                <label for="source2">На заході</label>
+                            </div>
+                            <div class="choose">
+                                <input type="radio" id="source3" name="source_info" value="Офлайн оголошення" autocomplete="off" />
+                                <label for="source3">Офлайн оголошення</label>
+                            </div>
+                            <div class="choose">
+                                <input type="radio" id="source4" name="source_info" value="Facebook" autocomplete="off" />
+                                <label for="source4">Facebook</label>
+                            </div>
+                        </div>
+                        <div class="part-2">
+                            <div class="choose">
+                                <input type="radio" id="source5" name="source_info" value="Instagram" autocomplete="off" />
+                                <label for="source5">Instagram</label>
+                            </div>
+                            <div class="choose">
+                                <input type="radio" id="source6" name="source_info" value="Youtube" autocomplete="off" />
+                                <label for="source6">Youtube</label>
+                            </div>
+                            <div class="choose">
+                                <input type="radio" id="source7" name="source_info" value="Інше" autocomplete="off" />
+                                <label for="source7">Інше</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3 -->
+        <section class="content">
+            <div class="appl3">
+                <div class="input-box1">
+                    <label for="relevance">Актуальність теми</label>
+                    <textarea id="relevance" name="relevance" placeholder="Стисло опишіть тематику проєкту та чому вона є актуальною" required autocomplete="off" ></textarea>
+                </div>
+                <div class="input-box1">
+                    <label for="main_aspects">Основні аспекти вашої пропозиції</label>
+                    <textarea id="main_aspects" name="main_aspects" placeholder="Сформулюйте основні аспекти вашої ідеї/проєкту. Що нового дасть реалізація вашого проєкту для студентів/учнів. Які переваги вашої пропозиції в порівнянні з наявними рішеннями?" required autocomplete="off" ></textarea>
+                </div>
+                <div class="input-box1">
+                    <label for="educational_part">Як ви бачите освітню складову проєкту?</label>
+                    <textarea id="educational_part" name="educational_part" placeholder="Зазначте види діяльності в рамках проєкту та орієнтовну кількість годин" required autocomplete="off" ></textarea>
+                </div>
+                <div class="input-box1">
+                    <label for="status">Статус ідеї</label>
+                    <textarea id="status" name="status" placeholder="Уточніть поточний статус ідеї/проєкту? Які подальші плани розвитку? (якщо є)" required autocomplete="off" ></textarea>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 4 -->
+        <section class="content2">
+            <div class="appl4">
+                <div class="choose-box">
+                    <h2>Ваші очікування. Яку саме підтримку від Noosphere Engineering School Dnipro Ви потребуєте?</h2>
+                    <div class="choose-option-g2">
+                        <div class="part-1">
+                            <div class="choose">
+                                <input type="radio" id="support1" name="expected_support" value="Експертиза менторів" checked autocomplete="off" />
+                                <label for="support1">Експертиза менторів</label>
+                            </div>
+                            <div class="choose">
+                                <input type="radio" id="support2" name="expected_support" value="Пошук команди для втілення ідеї/проєкту" autocomplete="off" />
+                                <label for="support2">Пошук команди для втілення ідеї/проєкту</label>
+                            </div>
+                            <div class="choose">
+                                <input type="radio" id="support3" name="expected_support" value="Майданчик для взаємодії зі студентами" autocomplete="off" />
+                                <label for="support3">Майданчик для взаємодії зі студентами</label>
+                            </div>
+                            <div class="choose">
+                                <input type="radio" id="support4" name="expected_support" value="Допомога у закупівлі електроніки, матеріалів, тощо" autocomplete="off" />
+                                <label for="support4">Допомога у закупівлі електроніки, матеріалів, тощо</label>
+                            </div>
+                        </div>
+                        <div class="part-2">
+                            <div class="choose">
+                                <input type="radio" id="support5" name="expected_support" value="Хостинг, сервер тощо" autocomplete="off" />
+                                <label for="support5">Хостинг, сервер тощо</label>
+                            </div>
+                            <div class="choose">
+                                <input type="radio" id="support6" name="expected_support" value="Обладнання" autocomplete="off" />
+                                <label for="support6">Обладнання</label>
+                            </div>
+                            <div class="choose">
+                                <input type="radio" id="support7" name="expected_support" value="Допомога у написанні грантових заявок" autocomplete="off" />
+                                <label for="support7">Допомога у написанні грантових заявок</label>
+                            </div>
+                            <div class="choose">
+                                <input type="radio" id="support8" name="expected_support" value="Інше" autocomplete="off" />
+                                <label for="support8">Інше</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="u">
+                    <p>Авторські права на ідеї, технології тощо завжди належать їхньому автору. Ми зобов'язуємося не передавати інформацію, надану в цій формі, третім особам без Вашої згоди</p>
+                    <p>Всі поля обов'язкові</p>
+                </div>
+                <div class="b">
+                    <button type="submit" class="button">Подати заявку</button>
+                </div>
+            </div>
+        </section>
+    </form>
+
+    <div id="footer"></div>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="script.js"></script>
+    <script src="form1.js"></script>
+
+    <script>
+        const phoneInput = document.getElementById('phone');
+
+        phoneInput.addEventListener('input', function(e) {
+            // залишаємо тільки цифри
+            let digits = this.value.replace(/\D/g, '');
+
+            // завжди додаємо +38(0
+            let formatted = '+38(0';
+
+            // наступні цифри
+            if (digits.length > 3) {
+                formatted += digits.substring(3, 5); // код оператора
+                if (digits.length > 5) {
+                    formatted += ')' + digits.substring(5, 8); // перші 3 цифри номера
+                    if (digits.length > 8) {
+                        formatted += '-' + digits.substring(8, 10); // наступні 2 цифри
+                        if (digits.length > 10) {
+                            formatted += '-' + digits.substring(10, 12); // останні 2 цифри
+                        }
+                    }
+                } else {
+                    formatted += ')';
+                }
+            }
+
+            this.value = formatted;
+        });
+
+    </script>
+</body>
+</html>
